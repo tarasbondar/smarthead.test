@@ -15,8 +15,6 @@ class Init extends Migration
             $table->text('description');
             $table->string('image', 64)->nullable();
             $table->tinyInteger('status')->default(0);
-            $table->date('start_date');
-            $table->date('finish_date');
             $table->timestamps();
         });
 

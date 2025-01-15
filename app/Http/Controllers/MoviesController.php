@@ -112,6 +112,7 @@ class MoviesController extends Controller
         $request->validate([
             'id' => 'required|exists:movies,id'
         ]);
+
         $movie = Movie::find($request->get('id'));
         if (isset($movie->image)) {
             File::delete(public_path('uploads') . '/' . $movie->image);
